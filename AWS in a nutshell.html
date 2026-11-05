@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AWS in a nutshell</title>
+<style>
+:root{
+  --bg:#f3f6f9; --ink:#17212b; --muted:#53606d; --line:#d5dde5;
+  --panel:#ffffff; --accent:#0a6c8f; --sky:#e3f0f6;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10171d; --ink:#e8eef3; --muted:#9aa8b5; --line:#2a3641;
+    --panel:#17212a; --accent:#5cc3e4; --sky:#14303c; color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:17px/1.6 Georgia,"Times New Roman",serif;
+}
+main{max-width:46rem; margin:0 auto; padding:3rem 1.25rem 4rem}
+h1{
+  font:700 clamp(2.4rem,8vw,4rem)/1.05 "Trebuchet MS",Verdana,sans-serif;
+  letter-spacing:-.02em; margin:0 0 1rem;
+}
+h2{font:700 1.3rem/1.3 "Trebuchet MS",Verdana,sans-serif; margin:0 0 .4rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:34rem; margin:0 0 2.5rem}
+.stack{
+  border:1px solid var(--line); border-radius:6px; overflow:hidden;
+  background:var(--panel);
+}
+.layer{padding:1.1rem 1.4rem; border-bottom:1px solid var(--line)}
+.layer:last-child{border-bottom:0}
+.layer:nth-child(1){background:var(--sky)}
+.layer p{margin:0; color:var(--muted)}
+.layer b{color:var(--accent); font-family:"Trebuchet MS",Verdana,sans-serif}
+.note{margin-top:2.5rem; padding-left:1rem; border-left:3px solid var(--accent)}
+.note p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+footer{margin-top:3rem; font-size:.9rem; color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Rent the computers. Skip the data center.</h1>
+  <p class="lead">Amazon Web Services lets you use servers, storage and databases over the internet and pay only for what you use.</p>
+
+  <div class="stack">
+    <div class="layer">
+      <h2>Your app</h2>
+      <p>A website, a mobile backend, a nightly report. This is the part you write.</p>
+    </div>
+    <div class="layer">
+      <h2><b>EC2</b> for servers</h2>
+      <p>Virtual machines you start in a minute and stop when you are done.</p>
+    </div>
+    <div class="layer">
+      <h2><b>S3</b> for files</h2>
+      <p>Storage for images, backups and static websites, with very high durability.</p>
+    </div>
+    <div class="layer">
+      <h2><b>RDS</b> for databases</h2>
+      <p>Managed MySQL, PostgreSQL and others, with backups handled for you.</p>
+    </div>
+    <div class="layer">
+      <h2><b>Lambda</b> for small functions</h2>
+      <p>Run code only when something happens. No server to look after.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p>New to AWS? Start with S3. Upload a file, turn on static hosting, and you have a live website.</p>
+  </div>
+
+  <footer>Learn more at <a href="https://aws.amazon.com/getting-started/">aws.amazon.com/getting-started</a>.</footer>
+</main>
+</body>
+</html>
